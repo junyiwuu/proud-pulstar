@@ -1,0 +1,6 @@
+---
+title: wine
+---
+## configuration
+`winecfg`
+

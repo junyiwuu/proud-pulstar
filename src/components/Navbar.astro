@@ -1,0 +1,61 @@
+---
+import Container from "./Container.astro";
+---
+
+<nav class="nav">
+    <Container>
+        <div class="nav-container">
+            <div>
+                <a href="/"><img src="/images/icons/junyi.png" alt="Astra"/></a>
+            </div>
+            <ul class="nav-items">
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/study_notes">Study Notes</a></li>
+                <li><a href="/aboutme">About Me</a></li>
+            </ul>
+        </div>
+    </Container>
+</nav>
+
+
+
+<style>
+    nav {
+        background: var(--secondary);
+
+        img { height: 30px};
+
+        .nav-container{
+            display: flex;
+            padding: 20px 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-items{
+            list-style-type: none;
+            display: flex;
+            gap: 24px;
+
+
+            /* for everything inside this nav-items */
+            a {  
+                text-decoration: none;
+                color: var(--dark);
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            &{
+                flex-direction: column; 
+                gap: 16px;
+            }
+            
+        }
+    }
+</style>
+
+
+
+

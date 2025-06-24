@@ -1,0 +1,93 @@
+---
+import {getCollection} from "astro:content";
+import SectionHeader from "./SectionHeader.astro";
+import Section from "./Section.astro";
+import HorizontalSeparator from "./HorizontalSeparator.astro";
+import BlogCard from "./BlogCard.astro";
+
+
+const blogs = (await getCollection("blogs"))
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
+
+
+const heading = "Blog";
+const cta = {text: "View All Blogs", href: "/blogs"};
+
+---
+<Section dark={true}>
+    <SectionHeader heading={heading}  cta={cta}/>
+    <div class="blogs-container">
+
+    {
+        blogs.map( blog => (
+        <div class="card">
+            <BlogCard blogEntry={blog}/>
+        
+        </div>
+        ))
+    }  
+        
+    </div>
+</Section>
+
+
+
+
+
+<style>
+
+    .blogs-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      
+    .card {
+        background: #fff;
+        border: 1.5px solid #dedede;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px 0 rgba(50,50,50,0.05);
+        padding: 20px 24px;
+
+
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        min-height: 150px; 
+
+        &:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(50,50,50,0.10);
+            border-color: var(--primary, #402eff);
+            }
+        }
+
+    .card > *:last-child {
+        margin-top: auto;  /* 按钮推到底部 */
+        }
+  
+      h3 {
+        margin-top: 10px;
+        font-size: 22px; 
+        font-weight: 700;
+        
+      }
+        
+        a {
+          text-decoration: none;
+          color: var(--dark);
+          font-weight:  600;
+          font-size: 15px;
+        }
+        
+        @media (max-width: 700px) {
+          & {
+            grid-template-columns: 1fr;
+          }
+          
+        
+      }
+    }
+  
+  </style>

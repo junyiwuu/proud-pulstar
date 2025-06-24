@@ -1,0 +1,85 @@
+---
+import Section from "../components/Section.astro";
+import Layout from "../layouts/Layout.astro";
+
+const title="About Me";
+const email="aemail@gmail.com";
+---
+
+<Layout title="About me">
+    <Section>
+        <div class="aboutme-container">
+
+            <div class="aboutme-content">
+                <h1>{title}</h1>
+
+                <p>My name is Junyi Wu, I previously worked as 3D Generalist at Goodbye Kansas Studios.
+                    Now I am progressing the Computer Science master degree at Queen Mary University of London
+                    and finishing my dissertation. </p>
+
+                    <br/>
+
+                <p>Email: <a href={`mailto:${email}`}>{email}.</a></p>
+            </div>
+
+            <div class="aboutme-image">
+                <img src="/images/avatar.jpg" alt="avatar"/>        
+            </div>
+
+        </div>
+    </Section>
+</Layout>
+
+
+<style>
+    .aboutme-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 48px;
+        align-items: flex-start;
+        min-height: 300px;
+
+    
+    }
+
+
+    .aboutme-content{
+        font-size: 18px;
+    }
+
+
+
+
+    .aboutme-image {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .aboutme-image img{
+        max-width: 100%;
+        width: 180px;
+        border-radius: 16px;
+        object-fit: cover;
+
+        margin-bottom: auto;
+    }
+
+
+    @media (max-width: 800px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .contact-image {
+      align-items: center;
+      margin-top: 16px;
+    }
+    .contact-image img {
+      width: 120px;
+    }
+
+
+
+
+</style>

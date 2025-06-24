@@ -1,0 +1,97 @@
+---
+import ButtonLink from "./ButtonLink.astro"
+import Container from "./Container.astro"
+---
+
+
+
+<Container>
+<header id="header">
+    <div class="content">
+        <h1>
+            <span> Hi, I'm Junyi</span>
+                <!-- <span><span class="accent">a</span> specialist</span>  -->
+        </h1>
+
+        <p class="description">
+                I am currently studying Computer Science Master degree at Queen Mary University of London
+        </p>
+
+        <div class="button-container">
+            <ButtonLink href="/cv.pdf" text="view cv" variant="primary"/>
+            <ButtonLink href="/cv.pdf" text="download cv" variant='secondary' isDownload={true}/>
+            
+        </div>
+        
+    </div>
+    <img src="/images/avatar.jpg"/>
+</header>
+</Container>
+
+
+<style>
+    
+
+    #header 
+    {
+        display: grid;
+        grid-template-columns: 540px 1fr;
+        justify-items: center;
+        gap: 80px;
+        align-items: center;
+        margin-block: 30px;
+    
+    h1{
+        font-size: 48px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .accent{
+            color: var(--primary);     
+
+        }
+    }
+
+    img{
+        max-width: 60%;
+        height: auto;
+        width: 500px;
+    }
+    
+
+
+    .button-container{
+        display: flex;
+        gap: 10px;
+
+    }
+
+
+    .description{
+        line-height: 28px;
+        color: var(--dark);
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 1000px) {
+        & {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 40px;
+
+            img{
+                grid-row: 1;
+            }
+        }
+    }
+
+    @media (max-width: 600px){
+        .button-container{
+            flex-direction: column;
+
+        }
+    }
+
+    }
+</style>

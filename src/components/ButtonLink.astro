@@ -1,0 +1,50 @@
+---
+interface Props{
+    href:string;
+    text: string;
+    variant?: 'primary' | 'secondary';
+    isDownload?: boolean;
+}
+
+const {href, text, variant="primary", isDownload} = Astro.props;
+---
+
+
+
+<!-- if the download property is True, download it to the computer -->
+{isDownload &&
+    <a href={href} class={`button-link ${variant}`} download>{text}</a>
+}
+  
+
+<!-- if the download property is False, just open the file in the browser -->
+{!isDownload &&
+    <a href={href} class={`button-link ${variant}`}>{text}</a>
+}
+
+<style>
+    .button-link{
+        padding: 14px 32px;
+        display: block;
+        underline: none;
+        text-decoration: none;
+        font-size: 15px;
+        text-align: center;
+        width:178px;
+
+    }
+
+    .primary{
+        background: var(--primary);
+        color: white;
+    
+    }
+
+    .secondary{
+        background: white;
+        color: var(--primary);
+        border: 1px solid var(--primary);
+    }
+
+
+</style>
