@@ -44,7 +44,13 @@ description: remember details about how to use ssh key to push to github
 		* `git log --all` : show all branches pushes(not just current branch)
 		* all together: `git log --oneline --graph --all`
 		* exit log : `q`
+12. revert to certain commit:
+	* `git revert 5ac8992`:  just move the head to certain commit
+	* `git reset --hard db8015a`: move to certain commit and discard all changes
+		* `git push origin main --force`: also need to force push if need
 
+
+		
 ---
 ## Git + ssh
 ### Generate ssh key
