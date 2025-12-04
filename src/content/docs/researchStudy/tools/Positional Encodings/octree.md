@@ -6,6 +6,34 @@ description: what is octree
 
 **Octree**: A tree structure , where each node represents a cubic region of space --> which can be recursively subdivided into 8 smaller cubes (children nodes).
 
+[PlenOctrees: Real-time Rendering of Neural Radiance Fields](https://arxiv.org/pdf/2103.14024)
+
+Problem: NeRF can synthesize novel views of a scene with high fidelity (including view-dependent effects like specular highlights), but they are slow to render.
+- typically requiring many neural network queries per pixel, which makes real-time rendering infeasible
+
+Solution:
+PlenOctree: a hybrid representation that precomputes and "bakes" a trained NeRF into a sparse, hierarchical octree structure.
+- spherical harmonic factorization of appearance: 
+	- before: NeRF take view direction as an explicit input
+	- now: train a modified NeRF to output coefficients of spherical harmonic basis functions.
+	- During rendering, these basis functions can be evaluated for any view direction to recover the view-dependent color. 
+- PlenOctree structure: the scene is stored in an octree
+	- each leaf holds density and the spherical harmonic coefficients
+	- The octree is sparse, enforce a sparsity prior during training to keep memory reasonable, so only "important" regions are stored.
+- They can
+	- convert a trained NeRF into a PlenOctree
+	- further optimize the PlenOctree itself via differentiable rendering to improve quality, avoiding the need to wait for full NeRF convergence in some cases.
+	- 
+
+
+
+
+
+method to take a trained NeRF which is typically slow to evaluate because it requires an MLP per sample along each ray, and distill it into a sparse, hierarchical data structure (an octree) that can be rendered in real time, while preserving view-dependent appearance.
+
+
+
+
 
 ## Sparse Voxel Octree (SVO)
 SVO is a hierarchical data structure used to efficiently store and process large, mostly empty (sparse) 3D spaces made of voxel.

@@ -117,57 +117,57 @@ sudo mount -a
 ---
 ---
 
-## Finding
+## Searching / `find`
 
 already in a folder, and want to find anything name with "aa" (recursively)
 `find . -name "*aa*"`
+`find . -iname "*aa*"` (case insensitive search)
+`find . -type d -name "*cache*"` (only show directory)
+`find . -type f -name "*log*"` (only show files)
 
-`ls *aa*`
+`find /path/cache -type f -mtime +3 -delete`: find cache that older than 3 days ago
+`find /path -type f -mtime +7`  :Find all files that the last modified time is 7 days ago
+
+
+`ls *aa*` : find any file's name contains aa
+`ls "*aa*"` :  find the name that exactly equal to `*aa*`
 
 
 
 
+Find keyword in the file: `grep "error" logfile.txt`
+Recursive search in a directory: `grep -r "xxx" .` 
+> `.` represent the current directory
+
+**grep**
+
+|**Option**|**Description**|**Example**|
+|---|---|---|
+|**`-i`**|**Ignore Case** (matches 'Keyword', 'keyword', 'KEYWORD').|`grep -ri "fail" .`|
+|**`-l`**|**List Files only** (prints only the names of files containing the match, not the matching lines).|`grep -rl "secret" /etc`|
+|**`-n`**|**Line Number** (shows the line number where the match was found).|`grep -n "listen" /etc/httpd/conf/httpd.conf`|
+|**`-w`**|**Whole Word** (matches "key" but not "keyboard").|`grep -w "port" config.txt`|
 
 
----
-## Kernel
-**Show current kernel**
-`uname -r`
-
-**List all kernels**
-`rpm -q kernel`
-
-**Remove certain kernel**
-`sudo dnf remove kernel-<version>`
-
-**check GRUB** so the deleted kernel not display on the GRUB boot menu
-1. check`ls /boot/vmlinuz-* /boot/initramfs-*` then you  might see:
-```
-[xxx]$ ls /boot/vmlinuz-*
-/boot/vmlinuz-0-rescue-5b633ea425544c99914b0944b06a7c25
-/boot/vmlinuz-5.14.0-503.23.1.el9_5.x86_64
-/boot/vmlinuz-5.14.0-503.23.2.el9_5.x86_64
-[xxx]$ ls /boot/initramfs-*
-/boot/initramfs-0-rescue-5b633ea425544c99914b0944b06a7c25.img
-/boot/initramfs-5.14.0-503.23.1.el9_5.x86_64.img
-/boot/initramfs-5.14.0-503.23.1.el9_5.x86_64kdump.img
-/boot/initramfs-5.14.0-503.23.2.el9_5.x86_64.img
-/boot/initramfs-5.14.0-503.23.2.el9_5.x86_64kdump.img
-```
-
-2. remove everything about this kernel, full clean it 
-```bash
-sudo dnf remove $(rpm -qa | grep 5.14.0-503.35.1.el9_5)
-```
 
 ---
-## Copy
+## Copy / `cp`
 
 * copy from our machine to a remote machine:
 `scp myfile.txt ubuntu@192.168.1.30:/home/ubuntu/toRemoteHere.txt`
 
 copy from remote machine to our machine
 `scp ubuntu@192.168.1.30:/home/ubuntu/remoteFile.txt toLocalHere.txt`
+
+---
+## Remove / `rm`
+
+
+```bash
+rm -rf myfolder
+cp -r src_folder dst_folder
+```
+`-r`: recursive
 
 
 
@@ -184,7 +184,7 @@ copy from remote machine to our machine
 
 
 ---
-## System
+## System / `systemctl` / `systemd`
 
 ### systemd
 Linux init system, they start when the system start
@@ -219,6 +219,66 @@ Linux init system, they start when the system start
 
 ---
 `sudo ncdu .`  check the disk space
-`nvtop`  check gpu and other parts live-time status
+
 `mc` : terminal version browsing the files
 `watch -n1 nvidia-smi` : live-time check nvidia graphic card status
+
+
+
+
+
+
+## Check process / `top` / `ps`
+
+`nvtop`  check gpu and other parts live-time status
+`top` / `htop` : check process
+
+✔ 查看 Maya 是否真正启动
+
+```bash
+ps aux | grep maya
+```
+
+`ps`: process status
+`a`: show all user's processes
+`u`: user friendly format (user, cpu, memory etc)
+`x`: show the background services
+
+**Check the memory, cpu of a specific pid:**
+`ps -p 4374 -o pid,ppid,cmd,%cpu,%mem`
+
+
+
+---
+
+## Disk / `du` / `df`
+
+
+**`du`: disk usage**
+
+```bash
+ls -lh
+du -sh *       
+du -sh /path/to/dir
+```
+
+```bash
+du -sh *    
+```
+show the size of each file/folders in this directory
+
+- `du` disk usage
+- `-l`  long format
+- `-s`  summary
+- `-h`  human readable   (human readable is 125g, non human readable is 130215688)
+- `*`  all files/ folders in current directory
+- 
+The biggest 10 files:
+```
+du -ah . | sort -hr | head
+```
+- `-a`  show all files
+- `-r` reverse
+
+**`df` disk free**
+`df -h` : show disk usage for all filesystems in a human-readable way  (only for filesystem-level disk)

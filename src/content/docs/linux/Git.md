@@ -49,8 +49,32 @@ description: remember details about how to use ssh key to push to github
 	* `git reset --hard db8015a`: move to certain commit and discard all changes
 		* `git push origin main --force`: also need to force push if need
 
+---
 
-		
+## Develop new feature
+Switch to another branch:
+`git switch feature/new-feature`
+
+Create new branch and switch: 
+`git switch -c feature/new-feature`
+
+Just create new branch
+`git branch feature/new-feature`
+
+
+
+Abandon all current modifies: `git restore .`
+and remove untracked files: `git clean -fd`
+
+
+
+Current modification not commit also not abandon: `git stash`
+and get back these changes: `git stash pop`
+> clear stash: `git stash drop stash@{0}`
+> clear all stash: `git stash clear`
+
+
+
 ---
 ## Git + ssh
 ### Generate ssh key

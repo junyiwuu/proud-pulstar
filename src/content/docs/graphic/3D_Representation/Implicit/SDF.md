@@ -18,10 +18,7 @@ $$
 
 ## Neural Signed Distance Function
 
-
-
-
-Neural SDF encodes the SDF as the parameters $\theta$ of a neural network $f_\theta$. 
+- Neural SDF encodes the SDF as the parameters $\theta$ of a neural network $f_\theta$. 
 
 Retrieving the signed distance for a point $\mathbf{x} \in \mathbb{R}^3$ amounts to computing $f_\theta(\mathbf{x}) = \hat{d}$. The parameters $\theta$ are optimized with the loss
 $J(\theta) = \mathbb{E}_{\mathbf{x}, d} \mathcal{L}\left(f_\theta(\mathbf{x}), d\right),$
@@ -29,17 +26,13 @@ $J(\theta) = \mathbb{E}_{\mathbf{x}, d} \mathcal{L}\left(f_\theta(\mathbf{x}), d
 - $\mathcal{L}$ is some distance metric such as $L^2$-distance. 
 - An optional input “shape” feature vector $\mathbf{z} \in \mathbb{R}^m$ can be used to condition the network to fit different shapes with a fixed $\theta$.
 
-
-
-
-Paper: vhttps://arxiv.org/abs/2101.10994
-
+Paper: https://arxiv.org/abs/2101.10994
 Neural signed distance functions(SDFs) -- effective representation for 3D shapes
 
 
 **Before:** encode SDF with ==a large fixed-size neural network ==to approximate complex shapes with implicit . This MLP as the learned distance function
 - require many forward passes through trhe network for every pixel
-- imporactival for real time graphic
+- impractical for real time graphic
 
 
 

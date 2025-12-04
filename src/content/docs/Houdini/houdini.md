@@ -48,3 +48,6 @@ after install houdini and make it work:
 4. `houdini` then can start
 
 
+---
+## Install with launcher
+Install in : `/opt/sidefx/launcher`
