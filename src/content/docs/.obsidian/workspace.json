@@ -135,12 +135,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Houdini/issue collection.md",
+                "file": "2025-08-10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "issue collection"
+              "title": "2025-08-10"
             }
           }
         ]
@@ -264,13 +264,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Houdini/issue collection.md",
+                "file": "2025-08-10.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of issue collection"
+              "title": "Outline of 2025-08-10"
             }
           }
         ],
@@ -294,9 +294,10 @@
   },
   "active": "916b5c73ec9e679a",
   "lastOpenFiles": [
-    "Houdini/Link vscode.md",
     "temp3.md",
+    "vulkan/7.25_2025.md",
     "Houdini/issue collection.md",
+    "Houdini/Link vscode.md",
     "2025-08-10.md",
     "study_notes.md",
     "temp.md",
@@ -310,7 +311,6 @@
     "Houdini/Qt.md",
     "Houdini/hou.md",
     "Houdini/houdini.md",
-    "vulkan/7.25_2025.md",
     "vulkan/vulkanProjectInstall.md",
     "vulkan/utility.md",
     "vulkan/pre.md",
