@@ -1,6 +1,5 @@
 ---
-title:
-  - issue collections
+title: issue-collections
 ---
 
 
