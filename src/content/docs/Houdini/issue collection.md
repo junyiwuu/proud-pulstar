@@ -1,6 +1,6 @@
 ---
-aliases:
-  - Issue collections
+title:
+  - issue collections
 ---
 
 

@@ -135,12 +135,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Houdini/Qt.md",
+                "file": "temp2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Qt"
+              "title": "temp2"
             }
           }
         ]
@@ -264,13 +264,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Houdini/Qt.md",
+                "file": "temp2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Qt"
+              "title": "Outline of temp2"
             }
           }
         ],
@@ -292,18 +292,23 @@
       "random-note:Open random note": false
     }
   },
-  "active": "916b5c73ec9e679a",
+  "active": "f30d1782043c3e87",
   "lastOpenFiles": [
+    "study_notes.md",
+    "researchStudy/trainDiffusionModel.md",
+    "researchStudy/Lora_Example.md",
+    "researchStudy/buildDiffusionModelFromScratch.md",
+    "Houdini/usd.md",
+    "Houdini/Qt.md",
     "Houdini/Link vscode.md",
     "Houdini/issue collection.md",
-    "Houdini/houdini.md",
     "Houdini/hou.md",
-    "Vulkan structure.md",
+    "Houdini/houdini.md",
     "temp3.md",
+    "Vulkan structure.md",
     "test hash grid ablation.md",
     "temp2.md",
     "2025-08-10.md",
-    "study_notes.md",
     "temp.md",
     "vulkan/7.25_2025.md",
     "vulkan/vulkanProjectInstall.md",
@@ -313,13 +318,8 @@
     "vulkan/engine_architecture.md",
     "virtual environment/issues.md",
     "virtual environment/conda.md",
-    "researchStudy/trainDiffusionModel.md",
     "researchStudy/stable diffusion.md",
-    "researchStudy/buildDiffusionModelFromScratch.md",
     "researchStudy/basic_pipeline.md",
-    "researchStudy/tools/tensorboard.md",
-    "researchStudy/tools/taichi.md",
-    "researchStudy/tools/regularizer.md",
     "Untitled.base",
     "projects/browsers",
     "projects",
