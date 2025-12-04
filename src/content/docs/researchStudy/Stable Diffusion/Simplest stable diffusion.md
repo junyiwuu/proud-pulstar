@@ -1,5 +1,5 @@
 ---
-title:
+title: Simplest stable diffusion
 ---
 ## Load MNIST dataset
 

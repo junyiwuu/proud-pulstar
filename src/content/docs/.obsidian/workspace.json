@@ -135,12 +135,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-08-10.md",
+                "file": "researchStudy/tools/taichi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-08-10"
+              "title": "taichi"
             }
           }
         ]
@@ -264,13 +264,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2025-08-10.md",
+                "file": "researchStudy/tools/taichi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-08-10"
+              "title": "Outline of taichi"
             }
           }
         ],
@@ -294,32 +294,32 @@
   },
   "active": "916b5c73ec9e679a",
   "lastOpenFiles": [
+    "researchStudy/tools/regularizer.md",
+    "researchStudy/tools/Positional Encodings/Sphere Tracing.md",
+    "researchStudy/tools/Positional Encodings/ray marching.md",
+    "researchStudy/tools/Positional Encodings/Positional Encodings.md",
+    "researchStudy/tools/Positional Encodings/octree.md",
+    "researchStudy/tools/Positional Encodings/hash grid positional encoding.md",
+    "researchStudy/basic_pipeline.md",
+    "researchStudy/Stable Diffusion/attentions.md",
+    "researchStudy/Stable Diffusion/loss.md",
+    "researchStudy/Stable Diffusion/scheduler.md",
+    "researchStudy/Stable Diffusion/Simplest stable diffusion.md",
+    "researchStudy/Stable Diffusion/TechnicalReport.md",
     "temp3.md",
+    "temp2.md",
+    "study_notes.md",
+    "vulkan/vulkanProjectInstall.md",
+    "vulkan/utility.md",
+    "vulkan/pushConstants.md",
+    "vulkan/file.md",
+    "vulkan/engine_architecture.md",
+    "2025-08-10.md",
     "vulkan/7.25_2025.md",
     "Houdini/issue collection.md",
     "Houdini/Link vscode.md",
-    "2025-08-10.md",
-    "study_notes.md",
     "temp.md",
-    "temp2.md",
     "test hash grid ablation.md",
-    "Vulkan structure.md",
-    "researchStudy/trainDiffusionModel.md",
-    "researchStudy/Lora_Example.md",
-    "researchStudy/buildDiffusionModelFromScratch.md",
-    "Houdini/usd.md",
-    "Houdini/Qt.md",
-    "Houdini/hou.md",
-    "Houdini/houdini.md",
-    "vulkan/vulkanProjectInstall.md",
-    "vulkan/utility.md",
-    "vulkan/pre.md",
-    "vulkan/file.md",
-    "vulkan/engine_architecture.md",
-    "virtual environment/issues.md",
-    "virtual environment/conda.md",
-    "researchStudy/stable diffusion.md",
-    "researchStudy/basic_pipeline.md",
     "Untitled.base",
     "projects/browsers",
     "projects",
